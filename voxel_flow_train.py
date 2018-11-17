@@ -153,7 +153,7 @@ def train(dataset_frame1, dataset_frame2, dataset_frame3):
       if step % 10 == 0:
         # summary_str = sess.run(summary_op, feed_dict = feed_dict)
         # summary_writer.add_summary(summary_str, step)
-	      print("Loss at step %d: %f" % (step, loss_value))
+        print("Loss at step %d: %f" % (step, loss_value))
 
       if step % 500 == 0:
         # Run a batch of images	
@@ -178,7 +178,7 @@ def validate(dataset_frame1, dataset_frame2, dataset_frame3):
 def test(dataset_frame1, dataset_frame2, dataset_frame3):
   """Perform test on a trained model."""
   with tf.Graph().as_default():
-		# Create input and target placeholder.
+    # Create input and target placeholder.
     input_placeholder = tf.placeholder(tf.float32, shape=(None, 256, 256, 6))
     target_placeholder = tf.placeholder(tf.float32, shape=(None, 256, 256, 3))
     
